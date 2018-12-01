@@ -1,0 +1,23 @@
+extends layout
+block content
+    div.container
+        div.content
+            h1 Add New User
+            hr
+            form.from-horizontal(action="/users/create",method="POST")
+                div.form-group
+                    label.col-sm-3 Name
+                    input.col-sm-9.form-control(name="name",placeholder="Enter Your Name")
+                div.form-group
+                    label.col-sm-3 lastname
+                    input.col-sm-9.form-control(name="lastname",placeholder="Enter Your Lastame")                    
+                div.form-group
+                    label.col-sm-3 Birth
+                    input.col-sm-9.form-control(name="birth",placeholder="Enter Your Birth Date")
+                div.form-group
+                    label.col-sm-3 Email
+                    input.col-sm-9.form-control(name="email",placeholder="Enter Your Email")      
+                hr
+                div.from-group
+                    div.col-sm-9
+                        button.btn.btn-primary(type="submit") Add User                                  
