@@ -15,11 +15,11 @@ router.get("/create",function(req,res,next){
 })
 
 router.post("/create",function(req,res,next){
-  
+  res.send("data saved...");
 })
 
-router.delete("/create/:id",function(req,res,next){
-  
+router.get("/delete/:id",function(req,res,next){
+  res.send("data deleted...");
 })
 
 module.exports = router;
