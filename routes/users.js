@@ -15,7 +15,23 @@ router.get("/create",function(req,res,next){
 })
 
 router.post("/create",function(req,res,next){
-  res.send("data saved...");
+
+   new User({
+     name : req.body.name,
+     lastname : req.body.lastname,
+     birth : req.body.birth,
+     email : req.body.email
+   }).save(function(error,comment){
+
+    res.redirect("/users");
+
+   })
+
+
+
+
+
+ 
 })
 
 router.get("/delete/:id",function(req,res,next){
