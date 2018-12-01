@@ -1,0 +1,28 @@
+extends layout
+block content
+    div.container
+        div.content
+            div.row
+                h1 User List
+            hr
+            div.row
+                table.table.table-hover.table-bordered
+                    thead
+                        tr
+                            th Name
+                            th Surname
+                            th Birth
+                            th E-Mail
+                            th Process
+                    tbody
+                        tr
+                            td ali
+                            td veli
+                            td 1.1.1990
+                            td aliveli1@hotmail.com
+                            td 
+                                a.btn.btn-danger.btn-xs(href="/users/delete/1") Delete User
+                hr          
+                div.row
+                    div.col-md-12
+                        a.btn.btn-default(href="/users/create") (Add New User)
