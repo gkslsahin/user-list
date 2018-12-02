@@ -34,7 +34,13 @@ router.post("/create",function(req,res,next){
 })
 
 router.get("/delete/:id",function(req,res,next){
-  res.send("data deleted...");
+
+User.findByIdAndRemove(req.params.id,function(error,next){
+
+  res.redirect("/users");
+
+})
+
 })
 
 module.exports = router;
