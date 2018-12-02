@@ -15,13 +15,14 @@ block content
                             th E-Mail
                             th Process
                     tbody
-                        tr
-                            td ali
-                            td veli
-                            td 1.1.1990
-                            td aliveli1@hotmail.com
-                            td 
-                                a.btn.btn-danger.btn-xs(href="/users/delete/1") Delete User
+                        each user, i in userList
+                            tr
+                                td #{user.name}
+                                td #{user.lastname}
+                                td #{user.birth}
+                                td #{user.email}
+                                td 
+                                    a.btn.btn-danger.btn-xs(href="/users/delete/" + user._id) Delete User
                 hr          
                 div.row
                     div.col-md-12

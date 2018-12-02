@@ -7,7 +7,10 @@ var User = mongoose.model("User");
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.render("list");
+  User.find(function(error,users){
+    res.render("list",{ userList : users});
+  })
+  
 });
 
 router.get("/create",function(req,res,next){
@@ -26,10 +29,6 @@ router.post("/create",function(req,res,next){
     res.redirect("/users");
 
    })
-
-
-
-
 
  
 })
